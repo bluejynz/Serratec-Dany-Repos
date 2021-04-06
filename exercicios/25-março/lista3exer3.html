@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <script>
+        alert("Bem vindo!");
+        var num = parseInt(prompt("Digite um número para consultar sua tabuada"));
+        while(isNaN(num)){
+            parseInt(prompt("Por favor, digite um número válido"));
+        }
+        for(var i = 0; i <= 10; i++){
+            document.write(`<h2>
+                ${num} x ${i} = ${num * i}
+                </h2>`);
+        }
+    </script>
+</body>
+</html>

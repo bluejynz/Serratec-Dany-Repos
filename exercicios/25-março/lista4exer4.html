@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço total devido por um cliente</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+        th #title{
+            width: 200px;
+        }
+        th{
+            width: 200px;
+            height: 30px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body onload="">
+    <table>
+        <tr>
+            <th>
+                <h2 id="title" style="text-align: center;">Código</h2>
+            </th>
+            <th>
+                <h2 id="title"  style="text-align: center;">Preço unitário</h2>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                'ABCD'
+            </th>
+            <th>
+                R$5.30
+            </th>
+        </tr>
+        <tr>
+            <th>
+                'XYPK'
+            </th>
+            <th>
+                R$6.00
+            </th>
+        </tr>
+        <tr>
+            <th>
+                'KLMP'
+            </th>
+            <th>
+                R$3.20
+            </th>
+        </tr>
+        <tr>
+            <th>
+                'QRST'
+            </th>
+            <th>
+                R$2.50
+            </th>
+        </tr>
+    </table>
+
+    <script>
+        var cod = prompt("Digite o código do produto").toUpperCase();
+        var preco, precoTotal;
+
+        while(cod != "ABCD" && cod != "XYPK" && cod != "KLMP" && cod != "QRST"){
+            cod = prompt("Por favor, consulte a tabela e digite um código de produto válido").toUpperCase();
+        }
+
+        var quant = parseInt(prompt("Digite a quantidade comprada"));
+        while(isNaN(quant) || quant < 1){
+            quant = parseInt(prompt("Por favor, digite uma quantidade válida"));
+        }
+
+        switch(cod){
+            case "ABCD":
+                preco = 5.30;
+                break;
+            case "KLMP": 
+                preco = 3.20;
+                break;
+            case "QRST": 
+                preco = 2.50;
+                break;
+            case "XYPK": 
+                preco = 6;
+                break;
+        }
+
+        precoTotal = preco * quant;
+
+        document.write(`<h2><br>
+            Código do produto: ${cod}<br>
+            Quantidade: ${quant}<br><br>
+            O cliente está devendo R$${precoTotal.toFixed(2)}
+            </h2>`)
+    </script>
+</body>
+
+</html>

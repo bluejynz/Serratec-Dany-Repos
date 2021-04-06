@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menor número</title>
+</head>
+<body>
+    <script>
+        alert("Digite 3 números para saber qual é o menor");
+        var nums = [
+            parseInt(prompt("Digite o 1º número")),
+            parseInt(prompt("Digite o 2º número")),
+            parseInt(prompt("Digite o 3º número"))
+        ]
+
+        document.write(`<h2>
+            O menor número é ${Math.min.apply(Math, nums)}
+            </h2>`);
+    </script>
+</body>
+</html>

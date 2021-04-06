@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de salário e comissão</title>
+</head>
+<body>
+    <script>
+        /*
+            receber salario fixo e valor total das vendas
+            calcular a comissão
+            exibir o salario, a comissão e o salário final
+        */
+
+        var salFixo, vendas, comissao, salFinal;
+
+        salFixo = parseFloat(prompt("Digite o seu salário fixo"));
+        while(isNaN(salFixo)){
+            salFixo = parseFloat(prompt("Por favor, digite um valor válido.\nDigite o seu salário fixo"));
+        }
+
+        vendas = parseFloat(prompt("Digite o valor total das vendas"));
+        while(isNaN(vendas)){
+            vendas = parseFloat(prompt("Por favor, digite um valor válido.\nDigite o valor total das vendas"));
+        }
+
+        comissao = vendas * 0.04;
+        salFinal = salFixo + comissao;
+
+        document.write(`<h2>
+            Seu salário fixo é R$${salFixo.toFixed(2)}<br>
+            Você vendeu R$${vendas.toFixed(2)}<br><br>
+            Sua comissão foi de R$${comissao.toFixed(2)}<br><br>
+            Seu salário final é R$${salFinal.toFixed(2)}
+            </h2>`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suquinho Saracôco</title>
+</head>
+<body>
+    <script>
+        var litros, agua, suco;
+        alert("Bem vindo(a)!\nCalcularemos a quantidade de ingredientes necessários para fazer os litros desejados de suco de maracujá");
+        litros = parseFloat(prompt("Informe quantos litros de suco deseja fazer"));
+        while(isNaN(litros)){
+            litros = parseFloat(prompt("Por favor, digite um valor válido!\nInforme quantos litros de suco deseja fazer"));
+        }
+
+        agua = (litros * 8) / 10;
+        suco = (litros * 2) / 10;
+
+        document.write(`<h2>
+            Para fazer ${litros}L de suco de maracujá você precisa de:<br><br>
+            - ${agua}L de água<br>
+            - ${suco}L de suco
+            </h2>`);
+    </script>
+</body>
+</html>

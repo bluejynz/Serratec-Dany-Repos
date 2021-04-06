@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+</head>
+<body>
+    <script>
+        alert("Digite 3 notas para saber a média");
+        var nota1 = parseInt(prompt("Digite a 1ª nota"));
+        var nota2 = parseInt(prompt("Digite a 2ª nota"));
+        var nota3 = parseInt(prompt("Digite a aª nota"));
+
+        var media = (nota1 + nota2 + nota3) / 3;
+
+        document.write(`<h2>
+            A média do aluno é ${media.toFixed(1)}
+            </h2>`);
+    </script>
+</body>
+</html>

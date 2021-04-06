@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números entre 100 e 200</title>
+</head>
+<body>
+    <script>
+        /*
+        enquanto num != 0 pedir um numero
+        enquanto num isnan pedir valor valido
+        se num < 200 e > 100 --> contador++
+        */
+
+        alert("Bem vindo(a)!\nDigite números e te darei informações sobre eles");
+        var contador = 0;
+        var num = -1;
+        while(num != 0){
+            num = parseInt(prompt("Informe um número\nObs: Quando terminar de informar os números, informe o número 0 para ver as informações"));
+            while(isNaN(num)){
+                num = parseInt(prompt("Por favor, informe um número válido"));
+            }
+            if(num < 200 && num > 100){
+                contador++;
+            }
+        }
+        if(contador > 1){
+            document.write(`<h2>
+            Dos números que você informou ${contador} são menores que 200 e maiores que 100!
+            </h2>`);
+        } else if(contador == 0){
+            document.write(`<h2>
+            Dos números que você informou nenhum é menor que 200 e maior que 100!
+            </h2>`);
+        } else if(contador == 1){
+            document.write(`<h2>
+            Dos números que você informou 1 é menor que 200 e maior que 100!
+            </h2>`);
+        }
+        
+    </script>
+</body>
+</html>

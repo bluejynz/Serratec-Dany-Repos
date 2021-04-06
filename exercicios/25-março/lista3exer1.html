@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprovado ou reprovado? Eis a questão</title>
+</head>
+<body>
+    <script>
+        var nota1, nota2, nota3, media;
+        nota1 = parseFloat(prompt("Digite a primeira nota"));
+        nota2 = parseFloat(prompt("Digite a segunda nota"));
+        nota3 = parseFloat(prompt("Digite a terceira nota"));
+
+        while(isNaN(nota1)){
+            nota1 = parseFloat(prompt("Por favor, digite uma nota válida!\nDigite a primeira nota"));
+        }
+        while(isNaN(nota2)){
+            nota2 = parseFloat(prompt("Por favor, digite uma nota válida!\nDigite a segunda nota"));
+        }
+        while(isNaN(nota3)){
+            nota3 = parseFloat(prompt("Por favor, digite uma nota válida!\nDigite a terceira nota"));
+        }
+
+        media = (nota1 + nota2 + nota3) / 3;
+        if(media >= 7){
+            document.write(`<h2>
+                Sua média é <span style="color: green;">${media.toFixed(2)}</span><br>
+                Parabéns, você foi aprovado!
+                </h2>`);
+        } else if(media <= 4){
+            document.write(`<h2>
+                Sua média é <span style="color: red;">${media.toFixed(2)}</span><br>
+                Que pena, você foi reprovado!<br>
+                Estude mais da próxima vez!
+                </h2>`);
+        } else{
+            document.write(`<h2>
+                Sua média é <span style="color: yellow;">${media.toFixed(2)}</span><br>
+                Você está de recuperação!<br>
+                Estude mais e talvez ainda consiga ser aprovado!
+                </h2>`);
+        }
+
+    </script>
+</body>
+</html>

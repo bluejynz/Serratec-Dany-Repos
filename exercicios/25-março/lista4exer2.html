@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior número digitado</title>
+</head>
+<body>
+    <script>
+        var num;
+        var numMax = 0;
+        while(num != -1){
+            num = parseInt(prompt("Digite números inteiros positivos\nObs: Digite -1 para finalizar"));
+            while(isNaN(num) || num < -1){
+                num = parseInt(prompt("Por favor, digite um número válido (número inteiro positivo)"));
+            }
+            if(num > numMax){
+                numMax = num;
+            }
+        }
+
+        document.write(`<h2>
+            De todos os números que você informou, o maior foi ${numMax}
+            </h2>`)
+    </script>
+</body>
+</html>

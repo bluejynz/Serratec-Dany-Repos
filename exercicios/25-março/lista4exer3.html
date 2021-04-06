@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potenciação</title>
+</head>
+<body>
+    <script>
+        var resultado = 0;
+
+        var a = parseInt(prompt("Digite um número para ver o resultado da sua potenciação"));
+        while(isNaN(a) || a <= 0){
+            a = parseInt(prompt("Por favor, digite um número válido (maior que 0)"));
+        }
+
+        document.write(a + "! = ");
+
+        for(var i = a; i > 1; i--){
+            if(i == a){
+                resultado = i * (i-1);
+            } else{
+                resultado = resultado * (i-1);
+            }
+            document.write(i);
+            if(i > 1){
+                document.write(" x ");
+            }
+        }
+
+        document.write(" 1 = " + resultado);
+
+    </script>
+</body>
+</html>
