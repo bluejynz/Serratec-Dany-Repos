@@ -2,4 +2,8 @@
 
 
 
-* Só um repositório pra testes do curso de lógica do Serratec
+* ### Exercícios
+
+  * ##### Semana 1
+
+  * ##### Semana 2
